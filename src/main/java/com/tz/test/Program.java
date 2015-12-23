@@ -21,6 +21,8 @@ public class Program {
 		int n = 0;
 		List<String> liststr = test(b);
 		List<Integer> listint = test(n);
+		listint.forEach(x-> System.out.println(x.toString()));
+		//liststr.stream().filter(predicate);
 	}
 
 	public static List<Integer> dosomething() {
