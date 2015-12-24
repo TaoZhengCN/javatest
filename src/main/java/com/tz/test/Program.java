@@ -1,7 +1,15 @@
 package com.tz.test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import javax.print.attribute.HashAttributeSet;
+
+import com.sun.javafx.collections.MappingChange.Map;
 
 public class Program {
 
@@ -21,8 +29,16 @@ public class Program {
 		int n = 0;
 		List<String> liststr = test(b);
 		List<Integer> listint = test(n);
-		listint.forEach(x-> System.out.println(x.toString()));
-		//liststr.stream().filter(predicate);
+		listint.forEach(x -> System.out.println(x.toString()));
+		HashMap<Integer, String> map1 = new HashMap<Integer, String>();
+		listint.stream().map(x -> {
+			int a = 3;
+			int d = 4;
+			String strrr = (a + b +x).toString();
+			return strrr;
+		});
+		//liststr.stream().filter(predicate)
+
 	}
 
 	public static List<Integer> dosomething() {
