@@ -1,15 +1,13 @@
 package com.tz.test;
 
+
+import java.lang.annotation.Annotation;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-import javax.print.attribute.HashAttributeSet;
 
-import com.sun.javafx.collections.MappingChange.Map;
+
 
 public class Program {
 
@@ -20,7 +18,65 @@ public class Program {
 
 	private static void testReflection() {
 		Person p = new Person();
-		System.out.println(p.getClass().getName());
+		Class<?> c1 = null;
+		Class<?> c2 = null;
+		Class<?> c3 = null;
+
+		try {
+			c1 = Class.forName("com.tz.test.Person");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		c2 = p.getClass();
+		c3 = Person.class;
+
+		System.out.println(c1.getName());
+		System.out.println(c2.getName());
+		System.out.println(c3.getName());
+
+		System.out.println("***********************************************");
+		Class<?> classobj = null;
+		try {
+			classobj = Class.forName("com.tz.test.Person");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Person person = null;
+		try {
+			person = (Person) classobj.newInstance();
+		} catch (InstantiationException | IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		person.name = "Tom";
+		person.age = 18;		
+		person.introduce();
+		System.out.println("***********************************************");
+		
+		Class<?> classobj2 = null;
+		try {
+			classobj2.forName("com.tz.test.Person");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Object obj = null;
+		try {
+			obj = classobj2.newInstance();
+		} catch (InstantiationException | IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Class<?> classwhat = obj.getClass();
+		//classwhat.getMethod(name, parameterTypes)
+		
+		//Annotation[] annos =    obj.getAnnotations();
+		//annos[1].
+
 	}
 
 	private static void testGeneric() {
@@ -34,10 +90,10 @@ public class Program {
 		listint.stream().map(x -> {
 			int a = 3;
 			int d = 4;
-			String strrr = (a + b +x).toString();
+			String strrr = String.valueOf(a + d + x);
 			return strrr;
 		});
-		//liststr.stream().filter(predicate)
+		liststr.stream().filter(x-> x.length()>3);
 
 	}
 
