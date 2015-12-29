@@ -9,7 +9,6 @@ public class Person {
 	String name;
 	
 	public Person() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	public Person(String name, int age)

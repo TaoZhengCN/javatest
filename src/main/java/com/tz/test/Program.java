@@ -25,7 +25,6 @@ public class Program {
 		try {
 			c1 = Class.forName("com.tz.test.Person");
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		c2 = p.getClass();
@@ -40,14 +39,12 @@ public class Program {
 		try {
 			classobj = Class.forName("com.tz.test.Person");
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		Person person = null;
 		try {
 			person = (Person) classobj.newInstance();
 		} catch (InstantiationException | IllegalAccessException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -60,7 +57,6 @@ public class Program {
 		try {
 			classobj2.forName("com.tz.test.Person");
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -68,7 +64,6 @@ public class Program {
 		try {
 			obj = classobj2.newInstance();
 		} catch (InstantiationException | IllegalAccessException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		Class<?> classwhat = obj.getClass();
