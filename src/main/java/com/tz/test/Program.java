@@ -98,7 +98,7 @@ public class Program {
 	}
 
 	public static <T> List<T> test(T t) {
-		// 现在T是什么类型谁都不知道,编译器在编译的时候也是不知道的,只有在runtime时才知道
+		// 鐜板湪T鏄粈涔堢被鍨嬭皝閮戒笉鐭ラ亾,缂栬瘧鍣ㄥ湪缂栬瘧鐨勬椂鍊欎篃鏄笉鐭ラ亾鐨�,鍙湁鍦╮untime鏃舵墠鐭ラ亾
 		List<T> l = new ArrayList<T>();
 		l.add(t);
 		System.out.println(t);
