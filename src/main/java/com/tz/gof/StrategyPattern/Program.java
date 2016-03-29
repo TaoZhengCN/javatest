@@ -13,8 +13,8 @@ public class Program {
 		Duck modelDuck = new ModelDuck();
 		modelDuck.display();
 		modelDuck.performFly();
+		modelDuck.performQuack();
 		modelDuck.setFlyBehavior(new FlyRocketPowered());
 		modelDuck.performFly();
-
 	}
 }
