@@ -1,29 +1,29 @@
 package com.tz.gof.StrategyPattern;
 
 public abstract class Duck {
-	IFlyBehavior flyBehavior;
+    IFlyBehavior flyBehavior;
 
-	IQuackBehavior quackBehavior;
+    IQuackBehavior quackBehavior;
 
-	public void setFlyBehavior(IFlyBehavior flyBehavior) {
-		this.flyBehavior = flyBehavior;
-	}
+    public void setFlyBehavior(IFlyBehavior flyBehavior) {
+        this.flyBehavior = flyBehavior;
+    }
 
-	public void setQuackBehavior(IQuackBehavior quackBehavior) {
-		this.quackBehavior = quackBehavior;
-	}
+    public void setQuackBehavior(IQuackBehavior quackBehavior) {
+        this.quackBehavior = quackBehavior;
+    }
 
-	void performQuack() {
-		quackBehavior.quack();
-	}
+    void performQuack() {
+        quackBehavior.quack();
+    }
 
-	void performFly() {
-		flyBehavior.fly();
-	}
+    void performFly() {
+        flyBehavior.fly();
+    }
 
-	void swim() {
-		System.out.println("All ducks float,enen decoys");
-	}
+    void swim() {
+        System.out.println("All ducks float,enen decoys");
+    }
 
-	abstract void display();
+    abstract void display();
 }
