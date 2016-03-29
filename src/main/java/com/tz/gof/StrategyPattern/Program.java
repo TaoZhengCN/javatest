@@ -15,7 +15,6 @@ public class Program {
 		modelDuck.performFly();
 		modelDuck.setFlyBehavior(new FlyRocketPowered());
 		modelDuck.performFly();
-		modelDuck.performFly();
 
 	}
 }
